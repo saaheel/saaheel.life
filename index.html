@@ -146,6 +146,7 @@
                     border-left-width: 15px;
                     border-left-style: solid;
                     left: 100%;
+                    color: #46b8e9;
                   }
                   #timeline .demo-card:nth-child(odd) .head::before {
                     left: 491.5px;
@@ -158,6 +159,7 @@
                     border-right-width: 15px;
                     border-right-style: solid;
                     right: 100%;
+                    color: #3ee9d1;
                   }
                   #timeline .demo-card:nth-child(even) .head::before {
                     right: 489.5px;
@@ -299,7 +301,7 @@
                   {'month':'March', 'year':'2019', 'subtitle':'Himachal Pradesh', 'title':'Paragliding in Bir Billing', 'description':'Udaipur City Tour', 'photo':'http://placehold.it/1000x500', 'link':''}, 
                   {'month':'August', 'year':'2018', 'subtitle':'Uttar Pradesh', 'title':'Kanpur City Visit', 'description':'Kanpur City Visit', 'photo':'http://placehold.it/1000x500', 'link':''}, 
                 ];
-                
+
                 var eachTravelDetails = travelExperience.map((value, index) => {
                     return ('<div class="demo-card demo-card--step'+(index+1)+'"><div class="head"><div class="number-box"><span>'+value.month+' '+value.year+'</span></div><h2><span class="small">'+value.subtitle+'</span>'+value.title+'</h2></div><div class="body"><p>'+value.description+'</p><img src="'+value.photo+'" alt="'+value.title+'"></div></div>');
                 });
