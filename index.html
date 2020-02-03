@@ -1,327 +1,200 @@
-<html>
-        <head>
-                <meta charset="UTF-8">
-                <link rel="shortcut icon" type="image/x-icon" href="favico.ico">
-                <link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
-                <title>Saaheel Majethia's Life</title>
-                <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-                <style>
-                    /* Media Queries */
-                /* Card sizing */
-                /* Colors */
-                /* Calculations */
-                /* Placeholders */
-                @media (min-width: 1000px) {
-                  #timeline .demo-card:nth-child(odd) .head::after, #timeline .demo-card:nth-child(even) .head::after {
-                    position: absolute;
-                    content: "";
-                    width: 0;
-                    height: 0;
-                    border-top: 15px solid transparent;
-                    border-bottom: 15px solid transparent;
-                  }
-                
-                  #timeline .demo-card:nth-child(odd) .head::before, #timeline .demo-card:nth-child(even) .head::before {
-                    position: absolute;
-                    content: "";
-                    width: 9px;
-                    height: 9px;
-                    background-color: #bdbdbd;
-                    border-radius: 9px;
-                    box-shadow: 0px 0px 2px 8px #f7f7f7;
-                  }
-                }
-                /* Some Cool Stuff */
-                .demo-card:nth-child(1) {
-                  order: 1;
-                }
-                
-                .demo-card:nth-child(2) {
-                  order: 4;
-                }
-                
-                .demo-card:nth-child(3) {
-                  order: 2;
-                }
-                
-                .demo-card:nth-child(4) {
-                  order: 5;
-                }
-                
-                .demo-card:nth-child(5) {
-                  order: 3;
-                }
-                
-                .demo-card:nth-child(6) {
-                  order: 6;
-                }
-                
-                /* Border Box */
-                * {
-                  box-sizing: border-box;
-                }
-                
-                /* Fonts */
-                body {
-                  font-family: Roboto;
-                }
-                
-                #timeline {
-                  padding: 100px 0;
-                  background: #f7f7f7;
-                  border-top: 1px solid rgba(191, 191, 191, 0.4);
-                  border-bottom: 1px solid rgba(191, 191, 191, 0.4);
-                }
-                #timeline h1 {
-                  text-align: center;
-                  font-size: 3rem;
-                  font-weight: 200;
-                  margin-bottom: 20px;
-                }
-                #timeline p.leader {
-                  text-align: center;
-                  max-width: 90%;
-                  margin: auto;
-                  margin-bottom: 25px;
-                }
-                #timeline p.leader-quotes {
-                  text-align: center;
-                  max-width: 90%;
-                  margin: auto;
-                  margin-bottom: 25px;
-                  font-style: italic;
-                }
-                
-                #timeline .demo-card-wrapper {
-                  position: relative;
-                  margin: auto;
-                }
-                @media (min-width: 1000px) {
-                  #timeline .demo-card-wrapper {
-                    display: flex;
-                    flex-flow: column wrap;
-                    width: 1170px;
-                    height: 1650px;
-                    margin: 0 auto;
-                  }
-                }
-                #timeline .demo-card-wrapper::after {
-                  z-index: 1;
-                  content: "";
-                  position: absolute;
-                  top: 0;
-                  bottom: 0;
-                  left: 50%;
-                  border-left: 1px solid rgba(191, 191, 191, 0.4);
-                }
-                @media (min-width: 1000px) {
-                  #timeline .demo-card-wrapper::after {
-                    border-left: 1px solid #bdbdbd;
-                  }
-                }
-                #timeline .demo-card {
-                  position: relative;
-                  display: block;
-                  margin: 10px auto 80px;
-                  max-width: 94%;
-                  z-index: 2;
-                }
-                @media (min-width: 480px) {
-                  #timeline .demo-card {
-                    max-width: 60%;
-                    box-shadow: 0px 1px 22px 4px rgba(0, 0, 0, 0.07);
-                  }
-                }
-                @media (min-width: 720px) {
-                  #timeline .demo-card {
-                    max-width: 40%;
-                    background-color: #46b8e9;
-                  }
-                }
-                @media (min-width: 1000px) {
-                  #timeline .demo-card {
-                    max-width: 450px;
-                    height: 400px;
-                    margin: 90px;
-                    margin-top: 45px;
-                    margin-bottom: 45px;
-                  }
-                  #timeline .demo-card:nth-child(odd) {
-                    margin-right: 45px;
-                    background-color: #46b8e9;
-                  }
-                  #timeline .demo-card:nth-child(odd) .head::after {
-                    border-left-width: 15px;
-                    border-left-style: solid;
-                    left: 100%;
-                    color: #46b8e9;
-                  }
-                  #timeline .demo-card:nth-child(odd) .head::before {
-                    left: 491.5px;
-                  }
-                  #timeline .demo-card:nth-child(even) {
-                    margin-left: 45px;
-                    background-color: #3ee9d1;
-                  }
-                  #timeline .demo-card:nth-child(even) .head::after {
-                    border-right-width: 15px;
-                    border-right-style: solid;
-                    right: 100%;
-                    color: #3ee9d1;
-                  }
-                  #timeline .demo-card:nth-child(even) .head::before {
-                    right: 489.5px;
-                  }
-                  #timeline .demo-card:nth-child(2) {
-                    margin-top: 180px;
-                  }
-                }
-                #timeline .demo-card .head {
-                  position: relative;
-                  display: flex;
-                  align-items: center;
-                  color: #fff;
-                  font-weight: 400;
-                }
-                #timeline .demo-card .head .number-box {
-                  display: inline;
-                  float: left;
-                  margin: 15px;
-                  padding: 10px;
-                  font-size: 15px;
-                  line-height: 15px;
-                  font-weight: 600;
-                  background: rgba(0, 0, 0, 0.17);
-                }
-                #timeline .demo-card .head h2 {
-                  text-transform: uppercase;
-                  font-size: 1.3rem;
-                  font-weight: inherit;
-                  letter-spacing: 2px;
-                  margin: 0;
-                  padding-bottom: 6px;
-                  line-height: 1rem;
-                }
-                @media (min-width: 480px) {
-                  #timeline .demo-card .head h2 {
-                    font-size: 165%;
-                    line-height: 1.8rem;
-                  }
-                }
-                #timeline .demo-card .head h2 span {
-                  display: block;
-                  font-size: 0.6rem;
-                  margin: 0;
-                }
-                @media (min-width: 480px) {
-                  #timeline .demo-card .head h2 span {
-                    font-size: 0.8rem;
-                  }
-                }
-                #timeline .demo-card .body {
-                  background: #fff;
-                  border: 1px solid rgba(191, 191, 191, 0.4);
-                  border-top: 0;
-                  padding: 15px;
-                }
-                @media (min-width: 1000px) {
-                  #timeline .demo-card .body {
-                    height: 315px;
-                  }
-                }
-                #timeline .demo-card .body p {
-                  font-size: 14px;
-                  line-height: 18px;
-                  margin-bottom: 15px;
-                }
-                #timeline .demo-card .body img {
-                  display: block;
-                  width: 100%;
-                }
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Saaheel Majethia's Life</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100i,300,400,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Allura" rel="stylesheet">
+  
+  <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
 
-                /* #timeline .demo-card:nth-child(odd) {
-                    background-color: #46b8e9;
-                  }
-                  #timeline .demo-card:nth-child(odd) .head::after {
-                    border-color: #46b8e9;
-                  }
-                  #timeline .demo-card:nth-child(even) {
-                    background-color: #3ee9d1;
-                  }
-                  #timeline .demo-card:nth-child(even) .head::after {
-                    border-color: #3ee9d1;
-                  } */
+      <link rel="stylesheet" href="css/style.css">
 
-                /* #timeline .demo-card--step1 {
-                  background-color: #46b8e9;
-                }
-                #timeline .demo-card--step1 .head::after {
-                  border-color: #46b8e9;
-                }
-                #timeline .demo-card--step2 {
-                  background-color: #3ee9d1;
-                }
-                #timeline .demo-card--step2 .head::after {
-                  border-color: #3ee9d1;
-                }
-                #timeline .demo-card--step3 {
-                  background-color: #ce43eb;
-                }
-                #timeline .demo-card--step3 .head::after {
-                  border-color: #ce43eb;
-                }
-                #timeline .demo-card--step4 {
-                  background-color: #4d92eb;
-                }
-                #timeline .demo-card--step4 .head::after {
-                  border-color: #4d92eb;
-                }
-                #timeline .demo-card--step5 {
-                  background-color: #46b8e9;
-                }
-                #timeline .demo-card--step5 .head::after {
-                  border-color: #46b8e9;
-                } */
-                
-                  </style>
-                <script>
-                  window.console = window.console || function(t) {};
-                </script>
-                <script>
-                  if (document.location.search.match(/type=embed/gi)) {
-                    window.parent.postMessage("resize", "*");
-                  }
-                </script>
-    </head>
-    <body>
-        <section id="timeline">
-            <h1>Saaheel Majethia's Timeline</h1>
-            <p class="leader">Part of me travelled so far. Across cities & adventure activities done</p>
-            <p class="leader-quotes">Zindagi Lambi Honi Chaiye Badi Nai...!!!</p>
-            <p class="leader-quotes">When you travel, you remember the moments not the date & money...!!!</p>
-            <div class="demo-card-wrapper" id="data">
-            </div>
-        </section>
-        <script>
-                const travelExperience = [
-                  {'month':'September', 'year':'2019', 'subtitle':'Bangalore', 'title':'Go Karting', 'description':'Paintball & Go Karting in Patel Inn', 'photo':'http://placehold.it/1000x500', 'link':''},
-                  {'month':'September', 'year':'2019', 'subtitle':'Tamil Nadu', 'title':'Night Trek with Bonfire', 'description':'Night Trek with Bonfire', 'photo':'http://placehold.it/1000x500', 'link':''},
-                  {'month':'March', 'year':'2019', 'subtitle':'Rajasthan', 'title':'Udaipur City Tour', 'description':'Udaipur City Tour', 'photo':'http://placehold.it/1000x500', 'link':''},
-                  {'month':'March', 'year':'2019', 'subtitle':'Himachal Pradesh', 'title':'Paragliding in Bir Billing', 'description':'Udaipur City Tour', 'photo':'http://placehold.it/1000x500', 'link':''}, 
-                  {'month':'March', 'year':'2019', 'subtitle':'New Delhi', 'title':'Delhi City Tour', 'description':'Delhi City Tour', 'photo':'http://placehold.it/1000x500', 'link':''}, 
-                  {'month':'August', 'year':'2018', 'subtitle':'Uttar Pradesh', 'title':'Kanpur City Visit', 'description':'Kanpur City Visit', 'photo':'http://placehold.it/1000x500', 'link':''}, 
-                  // {'month':'January', 'year':'2017', 'subtitle':'Gujarat', 'title':'Kachhch Visit', 'description':'Kachhch Rann Utsav', 'photo':'http://placehold.it/1000x500', 'link':''}, 
-                  // {'month':'January', 'year':'2007', 'subtitle':'Rajasthan', 'title':'Jaipur City Visit', 'description':'Pink(Jaipur) City Visit', 'photo':'http://placehold.it/1000x500', 'link':''}, 
-                ];
+  
+</head>
 
-                var eachTravelDetails = travelExperience.map((value, index) => {
-                    return ('<div class="demo-card demo-card--step'+(index+1)+'"><div class="head"><div class="number-box"><span>'+value.month+' '+value.year+'</span></div><h2><span class="small">'+value.subtitle+'</span>'+value.title+'</h2></div><div class="body"><p>'+value.description+'</p><img src="'+value.photo+'" alt="'+value.title+'"></div></div>');
-                });
+<body>
+  <header>
+    <div class="container text-center">
+      <h1>Saaheel Majethia's Life</h1>
+      <p>Travel Diary of Saaheel</p>
+    </div>
+  </header>
 
-                eachTravelDetails.forEach(element => {  
-                    document.getElementById("data").innerHTML += element;
-                });
-              </script>
-    </body>
+  <section class="timeline">
+    <div class="container">
+      <div class="timeline-item">
+        <div class="timeline-img"></div>
+
+        <div class="timeline-content js--fadeInLeft">
+          <h2>Title</h2>
+       		<div class="date">1 MAY 2016</div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+          <a class="bnt-more" href="javascript:void(0)">More</a>
+        </div>
+      </div> 
+      
+      <div class="timeline-item">
+
+        <div class="timeline-img"></div>
+
+        <div class="timeline-content timeline-card js--fadeInRight">
+        	<div class="timeline-img-header">
+          	<h2>Card Title</h2>
+        	</div>
+        	<div class="date">25 MAY 2016</div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+          <a class="bnt-more" href="javascript:void(0)">More</a>
+        </div>
+
+      </div>   
+      
+      <div class="timeline-item">
+
+        <div class="timeline-img"></div>
+
+        <div class="timeline-content js--fadeInLeft">
+        	<div class="date">3 JUN 2016</div>
+          <h2>Quote</h2>
+          <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta explicabo debitis omnis dolor iste fugit totam quasi inventore!</blockquote>
+        </div>
+      </div>   
+      
+      <div class="timeline-item">
+
+        <div class="timeline-img"></div>
+
+        <div class="timeline-content js--fadeInRight">
+        	<h2>Title</h2>
+        	<div class="date">22 JUN 2016</div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+          <a class="bnt-more" href="javascript:void(0)">More</a>
+        </div>
+      </div>   
+      
+      <div class="timeline-item">
+
+        <div class="timeline-img"></div>
+
+        <div class="timeline-content timeline-card js--fadeInLeft">
+        	<div class="timeline-img-header">
+          	<h2>Card Title</h2>
+        	</div>
+        	<div class="date">10 JULY 2016</div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+          <a class="bnt-more" href="javascript:void(0)">More</a>
+        </div>
+      </div>   
+
+      <div class="timeline-item">
+
+        <div class="timeline-img"></div>
+
+        <div class="timeline-content timeline-card js--fadeInRight">
+        	<div class="timeline-img-header">
+          	<h2>Card Title</h2>
+        	</div>
+        	<div class="date">30 JULY 2016</div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+          <a class="bnt-more" href="javascript:void(0)">More</a>
+        </div>
+      </div>  
+      
+      <div class="timeline-item">
+
+        <div class="timeline-img"></div>
+
+        <div class="timeline-content js--fadeInLeft">
+        	<div class="date">5 AUG 2016</div>
+          <h2>Quote</h2>
+          <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta explicabo debitis omnis dolor iste fugit totam quasi inventore!</blockquote>
+        </div>
+      </div>   
+
+      <div class="timeline-item">
+
+        <div class="timeline-img"></div>
+
+        <div class="timeline-content timeline-card js--fadeInRight">
+        	<div class="timeline-img-header">
+          	<h2>Card Title</h2>
+        	</div>
+        	<div class="date">19 AUG 2016</div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+          <a class="bnt-more" href="javascript:void(0)">More</a>
+        </div>
+      </div>  
+
+      <div class="timeline-item">
+
+        <div class="timeline-img"></div>
+
+        <div class="timeline-content timeline-card js--fadeInRight">
+        	<div class="timeline-img-header">
+          	<h2>Card Title</h2>
+        	</div>
+        	<div class="date">19 AUG 2016</div>
+          <p>Saaheel ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+          <a class="bnt-more" href="javascript:void(0)">More</a>
+        </div>
+      </div>  
+      
+      <div class="timeline-item">
+
+        <div class="timeline-img"></div>
+
+        <div class="timeline-content js--fadeInLeft">
+        	<div class="date">1 SEP 2016</div>
+          <h2>Title</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+          <a class="bnt-more" href="javascript:void(0)">More</a>
+        </div>
+      </div>   
+      
+      <div class="timeline-item">
+
+        <div class="timeline-img"></div>
+
+        <div class="timeline-content js--fadeInLeft">
+        	<div class="date">1 SEP 2016</div>
+          <h2>Title</h2>
+          <p>saaheel 4 ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+          <a class="bnt-more" href="javascript:void(0)">More</a>
+        </div>
+      </div>  
+
+      <div class="timeline-item">
+
+        <div class="timeline-img"></div>
+
+        <div class="timeline-content js--fadeInLeft">
+        	<div class="date">1 SEP 2016</div>
+          <h2>Title</h2>
+          <p>saaheel 3 ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+          <a class="bnt-more" href="javascript:void(0)">More</a>
+        </div>
+      </div>  
+
+      <div class="timeline-item">
+
+        <div class="timeline-img"></div>
+
+        <div class="timeline-content js--fadeInLeft">
+        	<div class="date">1 SEP 2016</div>
+          <h2>Title</h2>
+          <p>saaheel 2 ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+          <a class="bnt-more" href="javascript:void(0)">More</a>
+        </div>
+      </div>  
+
+      
+          
+    </div>
+  </section>
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+<script src='https://cdn.jsdelivr.net/scrollreveal.js/3.3.1/scrollreveal.min.js'></script>
+
+    <script src="js/index.js"></script>
+
+</body>
 </html>
